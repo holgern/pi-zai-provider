@@ -1,0 +1,55 @@
+# @thesethrose/pi-zai-provider
+
+Z.AI (GLM models) provider extension for the [pi coding agent](https://github.com/badlogic/pi-mono). Registers all Z.AI GLM models using the OpenAI-compatible coding API with API key authentication.
+
+## Models
+
+| Model | Context | Max Output | Input $/MTok | Output $/MTok |
+|---|---|---|---|---|
+| GLM-5.1 | 200K | 128K | $1.00 | $3.20 |
+| GLM-5 | 200K | 128K | $1.00 | $3.20 |
+| GLM-5 Turbo | 200K | 128K | $1.20 | $4.00 |
+| GLM-5 Code | 200K | 128K | $1.20 | $5.00 |
+| GLM-4.7 | 200K | 128K | $0.60 | $2.20 |
+| GLM-4.7 Flash | 200K | 128K | Free | Free |
+| GLM-4.7 FlashX | 200K | 128K | $0.07 | $0.40 |
+| GLM-4.6 | 200K | 128K | $0.60 | $2.20 |
+| GLM-4.5 | 200K | 96K | $0.60 | $2.20 |
+| GLM-4.5 Air | 200K | 96K | $0.20 | $1.10 |
+| GLM-4.5 Flash | 200K | 96K | Free | Free |
+| GLM-4.5 X | 200K | 96K | $2.20 | $8.90 |
+| GLM-4.5 AirX | 200K | 96K | $1.10 | $4.50 |
+
+## Installation
+
+```bash
+# From npm
+pi install npm:@thesethrose/pi-zai-provider
+
+# From GitHub (no npm account needed)
+pi install git:github.com/TheSethRose/pi-zai-provider
+```
+
+## Setup
+
+After installing, authenticate with your Z.AI API key:
+
+```
+/login zai
+```
+
+Get your API key at: https://z.ai/manage-apikey
+
+## Usage
+
+Switch to a Z.AI model:
+
+```
+/model glm-5.1
+```
+
+## Notes
+
+- Uses the coding-specific endpoint (`api.z.ai/api/coding/paas/v4`) for plan quota consumption
+- Pi has native Z.AI compat built-in: `enable_thinking` param, `reasoning_content` streaming, and correct compat flags auto-detected from the `api.z.ai` URL
+- GLM-5.1 is available on all GLM Coding Plan tiers; GLM-5 requires Pro or Max

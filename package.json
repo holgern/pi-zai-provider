@@ -1,0 +1,20 @@
+{
+  "name": "@thesethrose/pi-zai-provider",
+  "version": "1.0.0",
+  "description": "Z.AI (GLM models) provider extension for pi coding agent with API key authentication",
+  "keywords": ["pi-package"],
+  "type": "module",
+  "license": "MIT",
+  "author": "TheSethRose",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheSethRose/pi-zai-provider"
+  },
+  "pi": {
+    "extensions": ["./index.ts"]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-ai": "*",
+    "@mariozechner/pi-coding-agent": "*"
+  }
+}
