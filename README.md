@@ -1,4 +1,4 @@
-# @thesethrose/pi-zai-provider
+# @holgern/pi-zai-provider
 
 Z.AI (GLM models) provider extension for the [pi coding agent](https://github.com/badlogic/pi-mono). Registers all Z.AI GLM models using the OpenAI-compatible coding API with API key authentication.
 
@@ -24,11 +24,9 @@ Z.AI (GLM models) provider extension for the [pi coding agent](https://github.co
 ## Installation
 
 ```bash
-# From npm
-pi install npm:@thesethrose/pi-zai-provider
 
 # From GitHub (no npm account needed)
-pi install git:github.com/TheSethRose/pi-zai-provider
+pi install git:github.com/holgern/pi-zai-provider
 ```
 
 ## Setup
